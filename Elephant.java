@@ -71,8 +71,10 @@ public class Elephant extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
+        //prevent edges of elephant image going off screen
         int halfWidth = getImage().getWidth()/2;
         
+        //move left only if not past the left border of world
         if (Greenfoot.isKeyDown("left"))
         {
             if (x-halfWidth > 0)
@@ -82,6 +84,7 @@ public class Elephant extends Actor
             } 
             facing = "right";
         }
+        //move right only if not past the right border of world 
         else if (Greenfoot.isKeyDown("right"))
         {
             if (x + halfWidth < getWorld().getWidth())
