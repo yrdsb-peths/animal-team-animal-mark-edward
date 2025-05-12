@@ -69,15 +69,25 @@ public class Elephant extends Actor
     public void act()
     {
         // Add your action code here.
-    
+        int x = getX();
+        int y = getY();
+        int halfWidth = getImage().getWidth()/2;
+        
         if (Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            if (x-halfWidth > 0)
+            {
+                setLocation (x-2, y);
+                
+            } 
             facing = "right";
         }
         else if (Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            if (x + halfWidth < getWorld().getWidth())
+            {
+                setLocation (x + 2, y);
+            }
             facing = "left";
         }
         
