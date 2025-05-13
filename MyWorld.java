@@ -25,6 +25,8 @@ public class MyWorld extends World {
         
         createApple();
         
+        createBoost();
+        
         //Sets background image
         setBackground("images/background.jpg");
     }
@@ -62,5 +64,16 @@ public class MyWorld extends World {
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject (apple, x, y);
+    }
+    
+    /**
+     * Create a new boost at random locations
+     */
+    public void createBoost()
+    {
+        SpeedBoost boost = new SpeedBoost();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject (boost, x, y);
     }
 }
