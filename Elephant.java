@@ -72,12 +72,20 @@ public class Elephant extends Actor
     
         if (Greenfoot.isKeyDown("left"))
         {
+
             move(-2);
+
+            
+
             facing = "right";
         }
         else if (Greenfoot.isKeyDown("right"))
         {
+
             move(2);
+
+         
+
             facing = "left";
         }
         
