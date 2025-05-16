@@ -11,7 +11,8 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     int level = 1;
-
+    public boolean isGameOver = false;
+    public boolean gameEnded = false;
     
     public MyWorld() {
         super(600, 400, 1, false);

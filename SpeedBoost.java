@@ -29,8 +29,10 @@ public class SpeedBoost extends Actor
         setLocation (x,y);
     
         
-        //Removes boost when it gets to the bottom
-        MyWorld world = (MyWorld) getWorld();
+        if (world.isGameOver())
+        {
+            return;
+        }
         if(getY() >= world.getHeight())
         {
             world.removeObject(this);
