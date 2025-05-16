@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The elephant is the hero.
  * 
- * @author (mark ku) 
- * @version (April 29 2025)
+ * @author (mark ku, edward wang) 
+ * @version (May 2025)
  */
 public class Elephant extends Actor
 {

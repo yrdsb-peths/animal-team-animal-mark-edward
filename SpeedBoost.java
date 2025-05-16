@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Speed boost for the elephant.
  * 
- * @author (mark ku) 
+ * @author (mark ku, edward wang) 
  * @version (May 16 2025)
  */
 public class SpeedBoost extends Actor
