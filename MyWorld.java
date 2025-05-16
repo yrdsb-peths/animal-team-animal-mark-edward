@@ -61,7 +61,7 @@ public class MyWorld extends World {
         score ++;
         scoreLabel.setValue(score);
         
-        if (score % 5 == 0)
+        if (score % 3 == 0)
         {
             level += 1;
         }
@@ -96,7 +96,7 @@ public class MyWorld extends World {
         {
             if (Greenfoot.isKeyDown("space"))
             {
-                gameEnded = true; // prevent multiple restarts
+                gameEnded = true; 
                 Greenfoot.setWorld(new MyWorld()); //restarts game   
             }
         }

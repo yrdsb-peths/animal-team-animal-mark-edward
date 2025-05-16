@@ -12,7 +12,7 @@ public class Elephant extends Actor
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
-    private int speed = -1;
+    private int speed = 1;
     //direction the elephant is facing at the star
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
@@ -79,7 +79,7 @@ public class Elephant extends Actor
         {
             if (x-halfWidth > 0)
             {
-                setLocation (x-2, y);
+                setLocation (x-speed, y);
                 
             } 
             facing = "right";
@@ -89,7 +89,7 @@ public class Elephant extends Actor
         {
             if (x + halfWidth < getWorld().getWidth())
             {
-                setLocation (x + 2, y);
+                setLocation (x + speed, y);
             }
             facing = "left";
         }
@@ -134,7 +134,7 @@ public class Elephant extends Actor
         {
             removeTouching (SpeedBoost.class);
             MyWorld world = (MyWorld) getWorld();
-
+            speed += 1;
             world.createBoost();
             elephantSound.play();
         }

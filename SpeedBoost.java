@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SpeedBoost extends Actor
 {
     
-    private int speed = 1;
+    
     public SpeedBoost()
     {
         GreenfootImage img = new GreenfootImage("images/boost.png");
