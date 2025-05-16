@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Speed boost for the elephant.
  * 
- * @author (mark ku, edward wang) 
- * @version (May 16 2025)
+ * @author (Mark Ku & Edward Wang) 
+ * @version (May 2025)
  */
 public class SpeedBoost extends Actor
 {
@@ -27,13 +27,10 @@ public class SpeedBoost extends Actor
         int x = getX();
         int y = getY() + 2;
         setLocation (x,y);
+    
         
-        if (world.isGameOver()) 
-        {
-            return;
-        }
-        
-        //Remove speedboost when at bottom 
+        //Removes boost when it gets to the bottom
+        MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
         {
             world.removeObject(this);

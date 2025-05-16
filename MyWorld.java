@@ -3,15 +3,15 @@ import greenfoot.*;
 /**
  * The world is where the elephant lives in
  * 
- * @author (mark ku, edward wang)
- * @ version (May 2025)
+ * @author Mark Ku & Edward Wang
+ * @ version May 2025
  */
 
 public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     int level = 1;
-    public boolean isGameOver = false;
+
     
     public MyWorld() {
         super(600, 400, 1, false);
@@ -30,6 +30,8 @@ public class MyWorld extends World {
         
         //Sets background image
         setBackground("images/background.jpg");
+        
+        
     }
     
     /**
@@ -41,6 +43,8 @@ public class MyWorld extends World {
         isGameOver = true;
         Label gameOverLabel = new Label ("Game Over", 100);
         addObject (gameOverLabel, 300, 200);
+        Label gameOverLabelInstructions = new Label ("Press [space] to play again", 50);
+        addObject (gameOverLabelInstructions, 300, 300);
     }
     
     public boolean isGameOver()
@@ -83,5 +87,17 @@ public class MyWorld extends World {
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject (boost, x, y);
+    }
+    
+    public void act()
+    {
+        if (isGameOver && !gameEnded)
+        {
+            if (Greenfoot.isKeyDown("space"))
+            {
+                gameEnded = true; // prevent multiple restarts
+                Greenfoot.setWorld(new MyWorld()); //restarts game   
+            }
+        }
     }
 }

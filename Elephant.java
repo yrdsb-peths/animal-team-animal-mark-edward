@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The elephant is the hero.
  * 
- * @author (mark ku, edward wang) 
+ * @author (Mark Ku & Edward Wang) 
  * @version (May 2025)
  */
 public class Elephant extends Actor
@@ -134,7 +134,7 @@ public class Elephant extends Actor
         {
             removeTouching (SpeedBoost.class);
             MyWorld world = (MyWorld) getWorld();
-            speed += 2;
+
             world.createBoost();
             elephantSound.play();
         }
