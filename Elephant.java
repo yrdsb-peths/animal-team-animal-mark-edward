@@ -129,6 +129,10 @@ public class Elephant extends Actor
         {
             removeTouching (SpeedBoost.class);
             MyWorld world = (MyWorld) getWorld();
+<<<<<<< Updated upstream
+=======
+            speed += 3;
+>>>>>>> Stashed changes
             world.createBoost();
             elephantSound.play();
         }
