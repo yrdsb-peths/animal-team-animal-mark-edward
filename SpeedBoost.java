@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * food for the elephant.
+ * Speed boost for the elephant.
  * 
  * @author (mark ku) 
- * @version (April 29 2025)
+ * @version (May 16 2025)
  */
 public class SpeedBoost extends Actor
 {
@@ -22,21 +22,19 @@ public class SpeedBoost extends Actor
      */
     public void act()
     {
+        MyWorld world = (MyWorld) getWorld();
         // SpeedBoost falls down
         int x = getX();
         int y = getY() + 2;
         setLocation (x,y);
+    
         
-        //Remove apple and draw game over when apple gets to bottom
-        MyWorld world = (MyWorld) getWorld();
+        //Remove speedboost when at bottom 
         if(getY() >= world.getHeight())
         {
             world.removeObject(this);
+            world.createBoost();
         }
     }
     
-    public void setSpeed(int spd)
-    {
-        speed = spd;
-    }
 }

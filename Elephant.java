@@ -12,7 +12,7 @@ public class Elephant extends Actor
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
-    
+    private int speed = -1;
     //direction the elephant is facing at the star
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
@@ -119,6 +119,11 @@ public class Elephant extends Actor
             elephantSound.play();
         }
     }
+
+    public void setSpeed(int spd)
+    {
+        speed = spd;
+    }
     
     /**
      * Eats boost
@@ -129,6 +134,7 @@ public class Elephant extends Actor
         {
             removeTouching (SpeedBoost.class);
             MyWorld world = (MyWorld) getWorld();
+            speed += 2;
             world.createBoost();
             elephantSound.play();
         }

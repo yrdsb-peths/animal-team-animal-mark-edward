@@ -34,6 +34,7 @@ public class MyWorld extends World {
     /**
      * End game and draw 'GameOver'
      */
+    
     public void gameOver()
     {
         Label gameOverLabel = new Label ("Game Over", 100);
