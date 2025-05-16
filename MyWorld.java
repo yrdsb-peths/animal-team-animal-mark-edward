@@ -11,6 +11,7 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     int level = 1;
+    public boolean isGameOver = false;
     
     public MyWorld() {
         super(600, 400, 1, false);
@@ -37,8 +38,14 @@ public class MyWorld extends World {
     
     public void gameOver()
     {
+        isGameOver = true;
         Label gameOverLabel = new Label ("Game Over", 100);
         addObject (gameOverLabel, 300, 200);
+    }
+    
+    public boolean isGameOver()
+    {
+        return isGameOver;
     }
     
     /**
