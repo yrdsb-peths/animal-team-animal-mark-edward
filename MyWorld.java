@@ -3,8 +3,8 @@ import greenfoot.*;
 /**
  * The world is where the elephant lives in
  * 
- * @author mark ku
- * @ version April 29 2025
+ * @author (mark ku, edward wang)
+ * @ version (May 2025)
  */
 
 public class MyWorld extends World {

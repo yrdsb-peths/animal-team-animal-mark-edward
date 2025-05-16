@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * title screen.
  * 
- * @author (mark ku) 
- * @version (may 9)
+ * @author (mark ku, edward wang) 
+ * @version (may 9, 2025)
  */
 public class TitleScreen extends World
 {

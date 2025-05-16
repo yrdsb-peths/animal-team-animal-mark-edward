@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * food for the elephant.
  * 
- * @author (mark ku) 
+ * @author (mark ku, edward wang) 
  * @version (April 29 2025)
  */
 public class Apple extends Actor
