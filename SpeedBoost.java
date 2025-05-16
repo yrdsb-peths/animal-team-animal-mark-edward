@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * food for the elephant.
  * 
- * @author (mark ku) 
- * @version (April 29 2025)
+ * @author (Mark Ku & Edward Wang) 
+ * @version (May 2025)
  */
 public class SpeedBoost extends Actor
 {
@@ -27,7 +27,7 @@ public class SpeedBoost extends Actor
         int y = getY() + 2;
         setLocation (x,y);
         
-        //Remove apple and draw game over when apple gets to bottom
+        //Removes boost when it gets to the bottom
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
         {
